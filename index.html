@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home-Axie Tracker</title>
+  <link rel="stylesheet" href="./assets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <!--Navbar-->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="#" class="navbar-logo"><img src="image/logo.png"></a>
+        
+        <div id="mobile-menu" class="navbar-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <ul class="navbar-menu">
+          <li class="navbar-btn">
+            <a href="signin.html" class="button">Sign in</a>
+          </li>
+          <li class="navbar-btn">
+            <a href="/" class="disco-button"><i class="ri-discord-line"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!--Home Section-->
+  <section class="home" id="#home">
+    <img class="BgHome" src="image/home.png">
+    <div class="card">
+      <p class="card-title">Year’s end is neither an end <br>nor a beginning but a <br>going on.</p>
+      <p class="card-subtitle">Join us to celebrate the last night of <br>the year across the country.</p>
+      <a href="#logcon"><button>
+        <span class="text">Create account</span>
+      </button></a>
+      <img src="image/People.png" alt="" class="people">
+      </div>
+
+      <!--gradient and content-->
+      <div class="gradient-container">
+        <div class="containerTwo">
+            <div class="columns">
+                <div class="head">
+                    <img src="image/ic_round-restaurant-menu.png" class="vecterOne">
+                    <h4 class="colHead">A single source of truth</h4>
+                </div>
+                <p class="colContent">When you add work to your <br> Slate calendar we automatically <br> calculate useful insights</p>
+            </div>
+
+            <div class="columns">
+                <div class="head">
+                    <img src="image/Vector.png" class="vecterTwo">
+                    <h4 class="colHead">Intuitive interface</h4>
+                </div>
+                <p class="colContent">When you add work to your <br> Slate calendar we automatically <br> calculate useful insights</p>
+            </div>
+
+            <div class="columns">
+                <div class="head">
+                    <img src="image/Vector-1.png" class="vecterThree">
+                    <h4 class="colHead">Or with rules</h4>
+                </div>
+                <p class="colContent">When you add work to your <br> Slate calendar we automatically <br> calculate useful insights</p>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!--signup section-->
+  <section id="signup">
+  <div class="LogContainer" id="logcon">
+    <h3>Add New Account</h3>
+    <form action="#">
+        <div class="formColOne">
+            <div class="One">
+                <label>Name</label><br>
+                <input type="text" id="name"><br>
+            </div>
+
+            <div class="two">
+                <label>Email</label><br>
+                <input type="email" id="email"><br>
+            </div>
+        </div>
+        
+        <div class="formColTwo">
+            <div class="three">
+                <label>Organization</label><br>
+                <input type="text" id="organization"><br>
+            </div>
+            
+            <div class="four">
+                <label>Role</label><br>
+                <select id="Role" name="select_role">
+                    <option value="Scholar">Scholar</option>
+                    <option value="Manager">Manager</option>
+                    <option value="HR">Team Lead</option>
+                </select><br>
+            </div>
+        </div>
+        
+        <div class="formColThree">
+            <div class="five">
+                <label>Password</label><br>
+                <input type="password" id="Password"><br>
+                <span><i id="toggler"class="ri-eye-fill"></i></span>
+            </div>
+
+            <div class="six">
+                <label>Confirm Password</label><br>
+                <input type="password" id="ConfirmPassword"><br>
+                <span><i id="toggler2"class="ri-eye-fill"></i></span>
+            </div>
+        </div>
+
+        <div class="desc">
+            <label>Profile Summary</label><br>
+            <textarea name="" id="" cols="30" rows="10"></textarea><br>
+        </div>
+
+        <a href="signin.html" class="AlreadyAC">Already have an account ?</a><br>
+
+        <button class="Create">Create account</button>
+    </form>
+</div>
+</section>
+<div class="blank"></div>
+  </body>
+  <!--eye toggler-->
+  <script type="text/javascript">
+    var password = document.getElementById('Password');
+    var toggler = document.getElementById('toggler');
+    showHidePassword = () => {
+    if (password.type == 'password') {
+      password.setAttribute('type', 'text');
+      toggler.classList.add('ri-eye-off-fill');
+    } else {
+      toggler.classList.remove('ri-eye-off-fill');
+      password.setAttribute('type', 'password');
+    }
+    };
+      toggler.addEventListener('click', showHidePassword);
+
+
+    var confirmpassword = document.getElementById('ConfirmPassword');
+    var toggler2 = document.getElementById('toggler2');
+    showHidePassword = () => {
+    if (confirmpassword.type == 'password') {
+      confirmpassword.setAttribute('type', 'text');
+      toggler2.classList.add('ri-eye-off-fill');
+    } else {
+      toggler2.classList.remove('ri-eye-off-fill');
+      confirmpassword.setAttribute('type', 'password');
+    }
+    };
+      toggler2.addEventListener('click', showHidePassword);
+  </script>
+</html>
